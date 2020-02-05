@@ -1,0 +1,11 @@
+qurelid,title,desc,num_experts,male,female,unknown,male_percent,female_percent,unknown_percent
+EXTRAIN01,W3C Systeam,W3C Systems Team,13,10,2,1,76.92307692307693,15.384615384615385,7.6923076923076925
+EXTRAIN02,Timed Text,Timed Text,14,14,0,0,100.0,0.0,0.0
+EXTRAIN03,Web Services Coordination,Web Services Coordination,9,8,1,0,88.88888888888889,11.11111111111111,0.0
+EXTRAIN04,User Agent Accessibility Guidelines,User Agent Accessibility Guidelines,11,7,4,0,63.63636363636363,36.36363636363637,0.0
+EXTRAIN05,XML Protocol,XML Protocol,20,19,0,1,95.0,0.0,5.0
+EXTRAIN06,Comm Team,Communications Team,7,3,4,0,42.857142857142854,57.14285714285714,0.0
+EXTRAIN07,Architecture Domain Team,Architecture Domain Team,12,13,1,0,108.33333333333333,8.333333333333332,0.0
+EXTRAIN08,W3C Management Team,W3C Management Team,12,11,1,0,91.66666666666666,8.333333333333332,0.0
+EXTRAIN09,Web Services Choreography,Web Services Choreography,18,15,3,0,83.33333333333334,16.666666666666664,0.0
+EXTRAIN10,Quality Assurance,Quality Assurance,10,7,3,0,70.0,30.0,0.0

@@ -1,0 +1,4 @@
+.project
+.pydevproject
+*.pyc
+src/data_preparation/EngineeringStudPrep.py

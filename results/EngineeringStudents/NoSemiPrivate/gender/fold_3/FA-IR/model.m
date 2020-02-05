@@ -1,0 +1,12 @@
+# Created by Octave 4.2.2, Mon Jan 20 16:50:18 2020 CET <meike@Irmchen>
+# name: omega
+# type: matrix
+# rows: 5
+# columns: 1
+ -0.1149792361308475
+ 0.1850409207440794
+ 0.009818427669393223
+ 0.2136783204591428
+ 0.1755110510548485
+
+
