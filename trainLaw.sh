@@ -11,14 +11,15 @@ PATH_TO_EXECUTABLE_LISTNET=$GIT_ROOT/listnet-src
 PATH_TO_LSAT_DATASETS=$GIT_ROOT/data/LawStudents
 RESULT_DIR=$GIT_ROOT/results/LawStudents 
 
-GAMMA_SMALL=500000 
-GAMMA_LARGE=50000000
 
 echo ""
 
 ################################################################################
 
 FOLD=gender
+
+GAMMA_SMALL=200000 
+GAMMA_LARGE=1000000
 
 echo "$FOLD COLORBLIND..."
 cd $PATH_TO_EXECUTABLE_LISTNET
@@ -43,9 +44,12 @@ echo "$FOLD GAMMA=SMALL..."
 echo "$FOLD GAMMA=LARGE..."
 ./train.m $RESULT_DIR/$FOLD/GAMMA\=LARGE/ $PATH_TO_LSAT_DATASETS/$FOLD/LawStudents_Gender_train.txt $RESULT_DIR/$FOLD/GAMMA\=LARGE/model.m $GAMMA_LARGE
 
-#################################################################################
+################################################################################
 
 FOLD=race_black
+
+GAMMA_SMALL=100000 
+GAMMA_LARGE=500000
 
 echo "$FOLD COLORBLIND..."
 cd $PATH_TO_EXECUTABLE_LISTNET

@@ -725,6 +725,7 @@ class DELTR_Evaluator():
 
         elif self.__dataset == 'law-gender':
             self.__trainingDir = self.__trainingDir + 'LawStudents/gender/'
+
             gamma = 'colorblind'
             pathsForColorblind = [self.__trainingDir + 'GAMMA=0/']
             pathsToScores = [self.__trainingDir + 'COLORBLIND/']
@@ -982,18 +983,6 @@ class DELTR_Evaluator():
             self.__protected_percentage_per_chunk_average_all_queries()
             self.__evaluate()
             self.__experimentNamesAndFiles["fair-pre-p*"] = self.__evaluationFilename
-
-            #######################################################################################
-            gamma = 'PREPROCESSED_PMinus'
-            pathsToScores = [self.__trainingDir + 'PREPROCESSED_PMinus/']
-
-            self.__original, self.__predictions = self.__prepareData(pathsToScores)
-            self.__evaluationFilename = self.__resultDir + 'performanceResults_Gamma=' + gamma + '_' + self.__dataset + '.txt'
-            self.__plotFilename = self.__resultDir + 'protNonprotDistribution_Gamma=' + gamma + '_' + self.__dataset + '.png'
-
-            self.__protected_percentage_per_chunk_average_all_queries()
-            self.__evaluate()
-            self.__experimentNamesAndFiles["fair-pre-p-"] = self.__evaluationFilename
 
             ######################################################################################
             gamma = 'PREPROCESSED_PPlus'
@@ -1424,7 +1413,7 @@ class DELTR_Evaluator():
             factor = 2.0
 
         if "law-gender" in filename:
-            factor = 1.0
+            factor = 1.3
 
         if "law-black" in filename:
             factor = 1.5
