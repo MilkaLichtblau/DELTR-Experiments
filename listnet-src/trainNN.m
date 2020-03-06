@@ -53,9 +53,9 @@ function [omega, avg_J] = trainNN(list_id, directory, X, y, T, e, quiet=true)
     end
     fprintf("\n")
 
-    %cost_filename = [directory "cost.png"];
-    %gradient_filename = [directory "gradient.png"];
-    %hf = figure('visible','off'); plot(cost_converge); print(hf, cost_filename, '-dpng');
-    %gf = figure('visible','off'); plot(omega_converge); print(gf, gradient_filename, '-dpng');
+    cost_filename = [directory "cost.png"];
+    gradient_filename = [directory "gradient.png"];
+    hf = figure('visible','off'); plot(cost_converge); print(hf, cost_filename, '-dpng');
+    gf = figure('visible','off'); plot(omega_converge); print(gf, gradient_filename, '-dpng');
 end
 
