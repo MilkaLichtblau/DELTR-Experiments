@@ -1428,7 +1428,7 @@ class DELTR_Evaluator():
         ax.set_ylim(bottom=(mean_y - factor * std_y), top=(mean_y + factor * std_y))
 
         if "trec" in filename:
-            factor = 0.7
+            factor = 1.2
             ax.set_xlim(left=(mean_x - factor * std_x), right=(mean_x + factor * std_x))
             ax.set_ylim(bottom=(mean_y - factor * std_y + 0.01), top=(mean_y + factor * std_y + 0.01))
 

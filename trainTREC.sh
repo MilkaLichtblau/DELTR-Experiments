@@ -12,10 +12,10 @@ PATH_TO_TREC_DATASET=$GIT_ROOT/data/TREC
 RESULT_DIR=$GIT_ROOT/results/TREC 
 
 GAMMA_SMALL=20000
-GAMMA_LARGE=200000
+GAMMA_LARGE=40000
 
 echo ""
-################################################################################
+###############################################################################
 
 FOLD=fold_1
 
@@ -43,7 +43,7 @@ echo "$FOLD GAMMA=SMALL..."
 echo "$FOLD GAMMA=LARGE..."
 ./train.m $RESULT_DIR/$FOLD/GAMMA\=LARGE/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/GAMMA\=LARGE/model.m $GAMMA_LARGE
 
-##################################################################################
+################################################################################
 
 FOLD=fold_2
 
@@ -71,7 +71,7 @@ echo "$FOLD GAMMA=SMALL..."
 echo "$FOLD GAMMA=LARGE..."
 ./train.m $RESULT_DIR/$FOLD/GAMMA\=LARGE/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/GAMMA\=LARGE/model.m $GAMMA_LARGE
 
-####################################################################################
+##################################################################################
 
 FOLD=fold_3
 
@@ -99,7 +99,7 @@ echo "$FOLD GAMMA=SMALL..."
 echo "$FOLD GAMMA=LARGE..."
 ./train.m $RESULT_DIR/$FOLD/GAMMA\=LARGE/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/GAMMA\=LARGE/model.m $GAMMA_LARGE
 
-#####################################################################################
+###################################################################################
 
 FOLD=fold_4
 
@@ -127,7 +127,7 @@ echo "$FOLD GAMMA=SMALL..."
 echo "$FOLD GAMMA=LARGE..."
 ./train.m $RESULT_DIR/$FOLD/GAMMA\=LARGE/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/GAMMA\=LARGE/model.m $GAMMA_LARGE
 
-######################################################################################
+####################################################################################
 
 FOLD=fold_5
 
@@ -155,13 +155,13 @@ echo "$FOLD GAMMA=SMALL..."
 echo "$FOLD GAMMA=LARGE..."
 ./train.m $RESULT_DIR/$FOLD/GAMMA\=LARGE/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/GAMMA\=LARGE/model.m $GAMMA_LARGE
 
-######################################################################################
+####################################################################################
 
 FOLD=fold_6
 
 echo "$FOLD COLORBLIND..."
 cd $PATH_TO_EXECUTABLE_LISTNET
-./train.m $RESULT_DIR/$FOLD/COLORBLIND/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/CO$
+./train.m $RESULT_DIR/$FOLD/COLORBLIND/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/COLORBLIND/model.m
 
 echo "$FOLD PREPROCESSED..."
 cd $PATH_TO_EXECUTABLE_LISTNET

@@ -9,7 +9,7 @@ precision-top1            0.300
 precision-top5            0.193
 precision-top10           0.180
 precision-top20           0.217
-precision-top100          0.569
+precision-top100          0.567
 precision-top500          0.406
 prot-pos-mean-pred       70.852
 nprot-pos-mean-pred     104.514
@@ -20,5 +20,5 @@ nprot-pos-mean-orig      92.647
 prot-pos-median-orig    190.408
 nprot-pos-median-orig    93.025
 kendall-tau               0.133
-p-value                   0.094
+p-value                   0.098
 dtype: float64
