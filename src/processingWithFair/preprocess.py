@@ -102,7 +102,7 @@ class Preprocessing():
             print("Start reranking of Engineering Students Data - No Semi Private - gender")
             protected_attribute = "hombre"
             protected_group = "female"
-            header = ['query', 'hombre', 'psu_mat', 'psu_len', 'psu_cie', 'nem', 'score']
+            header = ['query_id', 'hombre', 'psu_mat', 'psu_len', 'psu_cie', 'nem', 'score']
             judgment = "score"
 
             fold_count = 1
@@ -129,7 +129,7 @@ class Preprocessing():
             print("Start reranking of Engineering Students Data - No Semi Private - highschool")
             protected_attribute = "highschool_type"
             protected_group = "highschool"
-            header = ['query', 'highschool_type', 'psu_mat', 'psu_len', 'psu_cie', 'nem', 'score']
+            header = ['query_id', 'highschool_type', 'psu_mat', 'psu_len', 'psu_cie', 'nem', 'score']
             judgment = "score"
 
             fold_count = 1
