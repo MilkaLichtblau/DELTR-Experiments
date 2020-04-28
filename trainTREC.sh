@@ -1,6 +1,14 @@
 #!/bin/bash
 # runs all trainings for big TREC data and saves result models into respective folders
 
+# exit when any command fails
+set -e
+
+# keep track of the last executed command
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+# echo an error message before exiting
+trap 'echo "\"${last_command}\" command filed with exit code $?."' EXIT
+
 export LD_PRELOAD=libGLX_mesa.so.0 	#very dirty hack to workaround this octave bug: error: __osmesa_print__: 
 					#Depth and stencil doesn't match, are you sure you are using OSMesa >= 9.0?
 

@@ -1,6 +1,14 @@
 #!/bin/bash
 # runs all predictions for W3C Experts data and saves results into respective folders
 
+# exit when any command fails
+set -e
+
+# keep track of the last executed command
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+# echo an error message before exiting
+trap 'echo "\"${last_command}\" command filed with exit code $?."' EXIT
+
 GIT_ROOT="$(git rev-parse --show-toplevel)"
 
 PATH_TO_EXECUTABLE_DELTR=$GIT_ROOT/deltr-src
