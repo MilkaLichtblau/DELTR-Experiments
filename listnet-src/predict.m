@@ -26,7 +26,7 @@ omega = load(model_file);
 drg = load(test_file);
 
 list_id = drg(:,1);
-X = drg(:,FEAT_START:size(drg,2)-FEAT_END);
+X = drg(:,FEAT_START:size(drg,2)-1);
 
 omega_values = omega.omega(:);
 
