@@ -26,13 +26,20 @@ else
 	FEAT_START = 3
 endif
 
+% if this experiment is pre-processing, exclude the last feature from training which is the document uuid
+%if isempty(strfind(training_file, "RERANKED"))
+%	FEAT_END = 1
+%else
+%	FEAT_END = 2
+%endif
+
 % load constants
 addpath(".")
 source "./globals.m";
 
 % load training dataset
 disp('loading training data...')
-data = load(training_file);
+data = csvread(training_file);
 list_id = data(:,1);
 X = data(:,FEAT_START:size(data,2)-1);
 y = data(:,size(data,2));

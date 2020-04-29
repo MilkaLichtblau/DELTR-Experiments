@@ -22,14 +22,12 @@ else
 	FEAT_START = 3
 endif
 
-
 omega = load(model_file);
 drg = load(test_file);
 
 list_id = drg(:,1);
-X = drg(:,FEAT_START:size(drg,2)-1);
+X = drg(:,FEAT_START:size(drg,2)-FEAT_END);
 
-%omega_values = omega.omega(1:size(omega),1);
 omega_values = omega.omega(:);
 
 z =  X * omega_values;
@@ -39,7 +37,7 @@ doc_ids = 1:size(z);
 y = drg(:, size(drg,2));
 
 if isempty(strfind(model_file, "COLORBLIND"))
-	# write protected attributed, if this is not a colorblind training
+	# write protected attributed, if this is not a colorblind prediction
 	y = [list_id, doc_ids', y, drg(:, FEAT_START)];
 else
 	y = [list_id, doc_ids', y];
@@ -50,7 +48,7 @@ dlmwrite(filename, y);
 
 # add document ids for later evaluation
 if isempty(strfind(model_file, "COLORBLIND"))
-	# write protected attributed, if this is not a colorblind training
+	# write protected attributed, if this is not a colorblind prediction
 	z = [list_id, doc_ids', z, drg(:, FEAT_START)];
 else
 	z = [list_id, doc_ids', z];

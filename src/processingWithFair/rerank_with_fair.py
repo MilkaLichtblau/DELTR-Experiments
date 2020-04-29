@@ -30,7 +30,8 @@ def rerank_featurevectors(dataDescription, p_deviation=0.0, post_process=False):
 
             candidate_row.iloc[0, data_query.columns.get_loc(dataDescription.judgment)] = (candidate.qualification / len(fairRanking))
 
-            reranked_features = reranked_features.append(candidate_row.iloc[0])
+            reranked_features = reranked_features.append(candidate_row.iloc[0], sort=False)
+            reranked_features = reranked_features[candidate_row.columns]
 
     # sort by judgment to ease evaluation of output
     reranked_features_sorted = pd.DataFrame()
@@ -42,10 +43,11 @@ def rerank_featurevectors(dataDescription, p_deviation=0.0, post_process=False):
 
     # bring file into expected format for evaluation, if used for post-processing
     if post_process:
-#             reranked_features_sorted.columns = ['pred_score', 'prot_attr', 'query_id', 'rank', 'uuid']
-            reranked_features_sorted = reranked_features_sorted.drop(columns=['uuid'])
-            reranked_features_sorted = reranked_features_sorted.astype({'prot_attr' : 'int64', 'rank' : 'int64'})
-            reranked_features_sorted = reranked_features_sorted[dataDescription.header]
+        reranked_features_sorted = reranked_features_sorted.drop(columns=['uuid'])
+        reranked_features_sorted = reranked_features_sorted.astype({'prot_attr' : 'int64', 'rank' : 'int64'})
+        reranked_features_sorted = reranked_features_sorted[dataDescription.header]
+    else:
+        reranked_features_sorted = reranked_features_sorted.drop(columns=['uuid'])
     reranked_features_sorted.to_csv(dataDescription.result_path, sep=',', index=False, header=False)
 
 
