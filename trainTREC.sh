@@ -29,7 +29,7 @@ FOLD=fold_1
 
 #echo "$FOLD COLORBLIND..."
 cd $PATH_TO_EXECUTABLE_LISTNET
-#./train.m $RESULT_DIR/$FOLD/COLORBLIND/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/COLORBLIND/model.m
+./train.m $RESULT_DIR/$FOLD/COLORBLIND/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/COLORBLIND/model.m
 
 echo "$FOLD PREPROCESSED..."
 ./train.m $RESULT_DIR/$FOLD/PREPROCESSED/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train_RERANKED.csv $RESULT_DIR/$FOLD/PREPROCESSED/model.m
