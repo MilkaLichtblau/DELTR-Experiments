@@ -11,7 +11,7 @@ precision-top10            0.000
 precision-top20            0.000
 precision-top100           0.040
 precision-top500           0.212
-prot-pos-mean-pred      3780.158
+prot-pos-mean-pred      3780.154
 nprot-pos-mean-pred     1826.167
 prot-pos-median-pred    3782.500
 nprot-pos-median-pred   1826.000
