@@ -19,14 +19,14 @@ PATH_TO_TREC_DATASET=$GIT_ROOT/data/TREC
 RESULT_DIR=$GIT_ROOT/results/TREC 
 
 GAMMA_SMALL=20000
-GAMMA_LARGE=40000
+GAMMA_LARGE=500000
 
 echo ""
 ###############################################################################
 
 FOLD=fold_1
 
-#echo "$FOLD COLORBLIND..."
+echo "$FOLD COLORBLIND..."
 cd $PATH_TO_EXECUTABLE_LISTNET
 ./train.m $RESULT_DIR/$FOLD/COLORBLIND/ $PATH_TO_TREC_DATASET/$FOLD/features_withListNetFormat_withGender_withZscore_candidateAmount-200_train.csv $RESULT_DIR/$FOLD/COLORBLIND/model.m
 
