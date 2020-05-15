@@ -8,8 +8,8 @@ exp-diff-orig             0.049
 precision-top1            0.300
 precision-top5            0.193
 precision-top10           0.178
-precision-top20           0.218
-precision-top100          0.570
+precision-top20           0.217
+precision-top100          0.568
 precision-top500          0.406
 prot-pos-mean-pred       70.871
 nprot-pos-mean-pred     104.512
@@ -19,6 +19,6 @@ prot-pos-mean-orig      174.496
 nprot-pos-mean-orig      92.647
 prot-pos-median-orig    190.408
 nprot-pos-median-orig    93.025
-kendall-tau               0.134
-p-value                   0.092
+kendall-tau               0.133
+p-value                   0.096
 dtype: float64
