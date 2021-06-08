@@ -20,6 +20,3 @@ in which grades are weighted by the credits of each course they passed and divid
 of credits they took.
 
 The column headers are as follows: `['query_id', 'protected_attribute', 'psu_math', 'psu_language', 'psu_science', 'high_school_grades', 'relevance_score']`
-
-### Working With the Original Dataset
-In order to obtain the original dataset, please send a request to [chato@chato.cl](chato@chato.cl) with subject line "Engineering dataset" to request the dataset for research-only purposes.
