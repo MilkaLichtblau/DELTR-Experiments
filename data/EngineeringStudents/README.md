@@ -19,7 +19,7 @@ The judgment score is created by sorting students by decreasing grades upon fini
 in which grades are weighted by the credits of each course they passed and divided by the total number 
 of credits they took.
 
+Additionally, a full dataset can be found in the folders 'gender' and 'highschool' containing the respective protected attributes.
+
 The column headers are as follows: `['query_id', 'protected_attribute', 'psu_math', 'psu_language', 'psu_science', 'high_school_grades', 'relevance_score']`
 
-### Working With the Original Dataset
-In order to obtain the original dataset, please send a request to [chato@chato.cl](chato@chato.cl) with subject line "Engineering dataset" to request the dataset for research-only purposes.
